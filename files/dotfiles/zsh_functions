@@ -63,3 +63,14 @@ reverse-search() {
   typeset -f zle-line-init >/dev/null && zle zle-line-init
   return $ret
 }
+
+_find_home(){
+  cd $WORKDIR
+  dirtomove=$(ls | fzf)
+  cd "$dirtomove"
+}
+
+_find(){
+  dirtomove=$(ls | fzf)
+  cd "$dirtomove"
+}

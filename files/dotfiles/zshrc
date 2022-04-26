@@ -122,6 +122,12 @@ zplug load
 ### (To find out the actual bindings, use Ctrl+V followed by the key in a zsh shell)
 ###
 
+# find in home directory
+zle         -N    _find_home
+zle         -N    _find
+bindkey  '^w'  _find_home
+bindkey  '^f'  _find
+
 # Skip forward/back a word with opt-arrow
 bindkey '[D' backward-word
 bindkey '[C' forward-word
