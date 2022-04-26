@@ -42,6 +42,7 @@ cask_packages:
   - dbeaver-community
   - slack
   - postman
+  - karabiner-elements
 
 cask_ql_packages:
   - qlmarkdown
