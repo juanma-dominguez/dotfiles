@@ -1,0 +1,37 @@
+- name: Set up local workstation
+  hosts: local
+  ignore_errors: yes
+  roles:
+    - role: brew
+      tags:
+        - brew
+        - bootstrap
+    - role: dotfiles
+      tags:
+        - dotfiles
+    - role: gem
+      tags:
+        - gem
+        - bootstrap
+    - role: npm
+      tags:
+        - npm
+        - bootstrap
+    - role: mas
+      tags:
+        - mas
+        - bootstrap
+    - role: macos
+      tags:
+        - macos
+        - bootstrap
+    - role: pip
+      tags:
+        - pip
+        - bootstrap
+    - role: bootstrap
+      tags:
+        - bootstrap
+    - role: docker
+      tags:
+        - docker

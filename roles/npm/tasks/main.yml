@@ -1,0 +1,6 @@
+- name: "[npm] Install global npm packages"
+  npm:
+    name: "{{ item }}"
+    global: yes
+    unsafe_perm: yes
+  loop: "{{ packages }}"

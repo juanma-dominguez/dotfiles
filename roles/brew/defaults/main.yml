@@ -1,0 +1,50 @@
+brew_taps:
+  - homebrew/bundle
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
+  - homebrew/core
+  
+brew_packages:
+  - ansible
+  - asciinema
+  - bat
+  - bitwarden-cli
+  - composer
+  - exa
+  - exiftool
+  - ffmpeg
+  - git-extras
+  - go
+  - gpg2
+  - htop
+  - terminal-notifier
+  - jq
+  - mas
+  - nodejs
+  - ruby
+  - telnet
+  - tmux
+  - wget
+  - zplug
+  - zsh
+  - fzf
+  - autojump
+
+cask_packages:
+  - raycast
+  - bitwarden
+  - google-chrome
+  - iterm2
+  - spotify
+  - visual-studio-code
+  - vlc
+  - dbeaver-community
+  - slack
+  - postman
+
+cask_ql_packages:
+  - qlmarkdown
+  - qlstephen
+  - quicklook-json
+  - suspicious-package

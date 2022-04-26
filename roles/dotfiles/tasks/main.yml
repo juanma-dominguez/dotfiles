@@ -1,0 +1,37 @@
+- name: "[dotfiles] Get list of files to symlink"
+  shell: "ls -1 ~/.dotfiles/files/dotfiles  > /tmp/dotfiles_symlinks_to_build"
+
+- name: "[dotfiles] Store list of files into variable"
+  shell: "cat /tmp/dotfiles_symlinks_to_build"
+  register: filesToSymlink
+
+- name: "[dotfiles] Set symlinks"
+  file:
+    src: "{{ ansible_env.PWD }}/files/dotfiles/{{ item }}"
+    path: "~/.{{ item }}"
+    state: link
+    force: yes
+  with_items:
+    - "{{filesToSymlink.stdout_lines}}"
+
+- name: "[dotfiles] Download git-shift and set executable bit"
+  get_url:
+    url: https://raw.githubusercontent.com/gitbits/git-shift/master/git-shift
+    dest: "{{ homebrew_prefix}}/bin/git-shift"
+    mode: "750"
+
+# TODO: get rid of this replace task, fork git-shift instead
+- name: "[dotfiles] Add commit-signage for git-shift"
+  replace:
+    path: "{{ homebrew_prefix}}/bin/git-shift"
+    regexp: "'git', 'commit-tree', @parent_opts,"
+    replace: "'git', 'commit-tree', '-S', @parent_opts,"
+
+- name: "[dotfiles] Download Vundle (vi bundle manager)"
+  git:
+    repo: https://github.com/VundleVim/Vundle.vim.git
+    dest: ~/.vim/bundle/Vundle.vim
+
+- name: "[dotfiles] Setup and install Vundle"
+  shell:
+    cmd: echo | echo | vim +PluginInstall +qall &>/dev/null
