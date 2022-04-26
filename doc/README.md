@@ -19,5 +19,13 @@ mas list => list apple store aplications
 ### Mac Defaults
 
 Defaults read => list all mac defaults config
+
 Defaults read com.apple.SoftwareUpdate => read domain configuration
+
 Defaults read com.apple.SoftwareUpdate ScheduleFrequency => read domain key configuration
+
+### zsh config files
+
+.zshrc => this file is executed each time the terminal open zsh. Include alias, functions, etc...
+
+.zshenv => environment variables
