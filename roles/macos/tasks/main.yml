@@ -12,6 +12,22 @@
     type: string
     value: Nlsv
 
+- name: '[macOS] small dock icon size'
+  osx_defaults:
+    domain: com.apple.dock
+    key: tilesize
+    type: float
+    value: 43
+    state: present
+
+- name: '[macOS] hide recent apps in dock'
+  osx_defaults:
+    domain: com.apple.dock
+    key: show-recents
+    type: bool
+    value: false
+    state: present
+
 - name: '[macOS] Unnatural scrolling'
   osx_defaults:
     domain: NSGlobalDomain
