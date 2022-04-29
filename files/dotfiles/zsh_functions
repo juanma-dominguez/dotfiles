@@ -59,7 +59,7 @@ _find-home(){
   cd "$dirtomove"
 }
 zle -N _find-home
-bindkey '^w' _find_home
+bindkey '^w' _find-home
 
 _find(){
   dirtomove=$(ls | fzf)
