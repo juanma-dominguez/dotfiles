@@ -4,6 +4,7 @@ brew_taps:
   - homebrew/cask-fonts
   - homebrew/cask-versions
   - homebrew/core
+  - aws/tap
   
 brew_packages:
   - ansible
@@ -30,6 +31,7 @@ brew_packages:
   - zsh
   - fzf
   - autojump
+  - aws-sam-cli
 
 cask_packages:
   - raycast
