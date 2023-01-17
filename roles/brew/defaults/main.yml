@@ -5,7 +5,8 @@ brew_taps:
   - homebrew/cask-versions
   - homebrew/core
   - aws/tap
-  
+  - hashicorp/tap
+
 brew_packages:
   - ansible
   - asciinema
@@ -32,6 +33,7 @@ brew_packages:
   - fzf
   - autojump
   - aws-sam-cli
+  - terraform
 
 cask_packages:
   - raycast
