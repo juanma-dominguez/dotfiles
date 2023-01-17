@@ -75,3 +75,6 @@ alias gpl="git pull --rebase --autostash"
 alias gb="git branch"
 alias gco="git checkout"
 alias gcb="git checkout -b"
+
+# terraform alias
+alias tf="terraform"

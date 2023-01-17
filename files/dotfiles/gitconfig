@@ -6,8 +6,8 @@
   autocrlf = input
 
 [user]
-  name = Juan Manuel Domínguez
-  email = juanmanuel.dominguez@dcsl.com
+	name = Juanma Domínguez
+	email = 1829987+juanma-dominguez@users.noreply.github.com
   signingkey = 
 
 [merge]
@@ -48,6 +48,7 @@
   clean = git lfs clean %f
   smudge = git lfs smudge %f
   required = true
+	process = git-lfs filter-process
 
 [commit]
   gpgsign = false
